@@ -12,4 +12,13 @@ class Person {
 
 }
 
-export default Person;
+class GenderedPerson extends Person {
+
+  constructor(firstName, lastName, age, gender) {
+    super(firstName, lastName, age);
+    this.gender = gender;
+  }
+
+}
+
+export { Person, GenderedPerson };
