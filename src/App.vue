@@ -1,26 +1,18 @@
 <template>
   <div id="app">
     <ol>
-      <li v-for="(person, index) in persons" :key="index">{{ person.name }} ({{ person.age }})</li>
+      <li v-for="(person, index) in persons" :key="index">{{ person.getName() }} ({{ person.age }})</li>
     </ol>
   </div>
 </template>
 
 <script>
+import Person from "./models/Person";
+
 let persons = [
-  {
-    name: "Alex5",
-    age: 5,
-  },
-  {
-    name: "Alex10",
-    age: 10,
-  },
-  {
-    name: "Alex30",
-    age: 30,
-  },
-  
+  new Person("Bill", "Gates", 64),
+  new Person("Steve", "Jobs", 65),
+  new Person("Ilon", "Musk", 45),
 ];
 
 export default {
